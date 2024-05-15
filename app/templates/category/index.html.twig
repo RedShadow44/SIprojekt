@@ -11,7 +11,9 @@
         <div class="navigation text-center">
             {{ knp_pagination_render(pagination) }}
         </div>
-
+        <a href="{{ url('category_create') }}" title="{{ 'action.create'|trans }}">
+            {{ 'action.create'|trans }}
+        </a>
         <table class="table table-striped">
             <thead>
             <tr>
