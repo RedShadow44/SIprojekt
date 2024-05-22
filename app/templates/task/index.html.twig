@@ -11,6 +11,9 @@
         <div class="navigation text-center">
             {{ knp_pagination_render(pagination) }}
         </div>
+        <a href="{{ url('task_create') }}" title="{{ 'action.create_task'|trans }}">
+            {{ 'action.create'|trans }}
+        </a>
 
         <table class="table table-striped">
             <thead>
@@ -34,6 +37,13 @@
                     <td>
                         <a href="{{ url('task_show', {id: task.id}) }}" title="{{ 'action.show'|trans }}">
                             {{ 'action.show'|trans }}
+                        </a>
+                        <a href="{{ url('task_edit', {id: task.id}) }}" title="{{ 'action.edit'|trans }}">
+                            {{ 'action.edit'|trans }}
+                        </a>
+                        <br>
+                        <a href="{{ url('task_delete', {id: task.id}) }}" title="{{ 'action.delete'|trans }}">
+                            {{ 'action.delete'|trans }}
                         </a>
                     </td>
                 </tr>
