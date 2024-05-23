@@ -18,6 +18,12 @@
             <dd>{{  task.title }}</dd>
             <dt>{{ 'label.category'|trans }}</dt>
             <dd>{{  task.category.title }}</dd>
+            <dt>{{ 'label.tags'|trans }}</dt>
+            <dd>
+                {% for tag in task.tags %}
+                    {{ tag.title }}
+                {% endfor %}
+            </dd>
         </dl>
         <p>
             <a href="{{ url('task_index') }}" title="{{ 'action.back_to_list'|trans }}">

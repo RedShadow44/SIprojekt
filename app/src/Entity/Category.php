@@ -61,7 +61,7 @@ class Category
      */
     #[Assert\Type('string')]
     #[Assert\NotBlank]
-    #[Assert\Length(min: 3, max: 64)]
+    #[Assert\Length(min: 2, max: 64)]
     #[ORM\Column(type: 'string', length: 255)]
     private ?string $title = null;
     /**
@@ -70,7 +70,7 @@ class Category
      */
     #[ORM\Column(type: 'string', length: 64)]
     #[Assert\Type('string')]
-    #[Assert\Length(min: 3, max: 64)]
+    #[Assert\Length(min: 2, max: 64)]
     #[Gedmo\Slug(fields: ['title'])]
     private ?string $slug = null;
 
